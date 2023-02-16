@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "1073003308022",
+    "firebase_url": "https://app-internato-teste-default-rtdb.firebaseio.com",
+    "project_id": "app-internato-teste",
+    "storage_bucket": "app-internato-teste.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1073003308022:android:e6a3f8194e8ea9177d9dd7",
+        "android_client_info": {
+          "package_name": "com.example.application"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1073003308022-gp642l6nk8rb87hsiserv91e6sku8ebh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBuzplxUP3aRllnoGB2IVPtpm6Njos6M3I"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1073003308022-gp642l6nk8rb87hsiserv91e6sku8ebh.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "1073003308022-mi8kmmbvvlnkh91pslt0fv4n6c3aickv.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.application"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
