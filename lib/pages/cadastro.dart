@@ -1,3 +1,4 @@
+import 'package:application/pages/home_page.dart';
 import 'package:flutter/material.dart';
 
 class Cadastro extends StatefulWidget {
@@ -9,6 +10,7 @@ class Cadastro extends StatefulWidget {
 
 class _CadastroState extends State<Cadastro> {
   @override
+  final _form = GlobalKey<FormState>();
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
@@ -21,6 +23,7 @@ class _CadastroState extends State<Cadastro> {
       ),
       body: ListView(children: [
         Container(
+          key: _form,
           margin:
               const EdgeInsets.only(bottom: 40, left: 25, right: 25, top: 40),
           child: const Material(
@@ -36,6 +39,7 @@ class _CadastroState extends State<Cadastro> {
           ),
         ),
         Container(
+          key: _form,
           margin: const EdgeInsets.only(bottom: 40, left: 25, right: 25),
           child: const Material(
             elevation: 20,
@@ -50,6 +54,7 @@ class _CadastroState extends State<Cadastro> {
           ),
         ),
         Container(
+          key: _form,
           margin: const EdgeInsets.only(bottom: 40, left: 25, right: 25),
           child: const Material(
             elevation: 20,
@@ -64,6 +69,7 @@ class _CadastroState extends State<Cadastro> {
           ),
         ),
         Container(
+          key: _form,
           margin: const EdgeInsets.only(bottom: 40, left: 25, right: 25),
           child: const Material(
             elevation: 20,
@@ -78,6 +84,7 @@ class _CadastroState extends State<Cadastro> {
           ),
         ),
         Container(
+          key: _form,
           margin: const EdgeInsets.only(bottom: 30, left: 25, right: 25),
           child: const Material(
             elevation: 20,
@@ -93,6 +100,7 @@ class _CadastroState extends State<Cadastro> {
         ),
         // ignore: avoid_unnecessary_containers
         Container(
+          key: _form,
           margin: const EdgeInsets.only(left: 50, right: 50, top: 20),
           height: 70,
           decoration: const BoxDecoration(
@@ -105,7 +113,15 @@ class _CadastroState extends State<Cadastro> {
             ],
           ),
           child: ElevatedButton(
-            onPressed: () {},
+            key: _form,
+            onPressed: () {
+              final isValid = _form.currentState!.validate();
+              if (isValid) {
+                _form.currentState?.save();
+                Navigator.pushReplacement(context,
+                    MaterialPageRoute(builder: (context) => HomePage()));
+              }
+            },
             style: ElevatedButton.styleFrom(
                 backgroundColor: const Color.fromRGBO(75, 174, 79, 1.0)),
             child: const Text(

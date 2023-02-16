@@ -1,3 +1,4 @@
+import 'package:application/data/dummy_cadastro.dart';
 import 'package:flutter/material.dart';
 
 import 'alterar_senha.dart';
@@ -7,6 +8,8 @@ class Perfil extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    const usersprof = {...DUMMY_USERSPROF};
+
     return Scaffold(
       appBar: AppBar(
         automaticallyImplyLeading: true,
@@ -39,7 +42,7 @@ class Perfil extends StatelessWidget {
               child: Container(
                   padding: const EdgeInsets.fromLTRB(20, 25, 15, 15),
                   height: 70,
-                  child: const Text('Nome Completo')),
+                  child: Text(usersprof.values.elementAt(1).cname)),
             ),
           ),
           Container(
@@ -50,7 +53,7 @@ class Perfil extends StatelessWidget {
               child: Container(
                   padding: const EdgeInsets.fromLTRB(20, 25, 15, 15),
                   height: 70,
-                  child: const Text('E-mail')),
+                  child: Text(usersprof.values.elementAt(1).cemail)),
             ),
           ),
           Container(
@@ -59,10 +62,11 @@ class Perfil extends StatelessWidget {
             child: ElevatedButton(
               style: ElevatedButton.styleFrom(
                   backgroundColor: const Color.fromRGBO(75, 174, 79, 1.0),
-                  padding: EdgeInsets.symmetric(horizontal: 50, vertical: 25)),
+                  padding:
+                      const EdgeInsets.symmetric(horizontal: 50, vertical: 25)),
               onPressed: () {
-                Navigator.of(context).push(
-                    MaterialPageRoute(builder: (context) => AlterarSenha()));
+                Navigator.of(context).push(MaterialPageRoute(
+                    builder: (context) => const AlterarSenha()));
               },
               child: const Text(
                 'Alterar Senha',
